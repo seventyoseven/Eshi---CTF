@@ -1,4 +1,8 @@
-from secret.verify_flag import check_flag
+try:
+    from secret.verify_flag import check_flag
+except ImportError:
+    print("Error: verification module missing.")
+    exit()
 
 result = input("Enter your flag: ").strip()
 
