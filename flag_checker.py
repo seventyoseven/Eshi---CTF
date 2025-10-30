@@ -1,13 +1,8 @@
-# flag_checker.py
+from secret.verify_flag import check_flag
 
-# The correct flag stored secretly
-correct_flag = "flag{shifted_message}"
-
-# Take input from the user
 result = input("Enter your flag: ").strip()
 
-# Check if it matches
-if result == correct_flag:
-    print("Correct flag! Well done.")
+if check_flag(result):
+    print("✅ Correct flag! Well done.")
 else:
-    print("Incorrect flag. Try again.")
+    print("❌ Incorrect flag. Try again.")
